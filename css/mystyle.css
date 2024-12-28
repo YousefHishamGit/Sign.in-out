@@ -1,0 +1,77 @@
+/* div {
+    width: 360px;
+    height: 360px;
+    background-color: rgb(177, 174, 174);
+    margin: auto;
+    background-image: linear-gradient(to right, black 25%, red 25%);
+} */
+
+body {
+    background-color: #2A3335;
+}
+
+.bigOneSignUp,
+.bigOneSignIn {
+    margin-top: 6% !important;
+    box-shadow: 12px 11px 20px black;
+}
+
+.left {
+    background-color: #173B45;
+}
+
+.right {
+    background-color: rgb(251, 251, 251);
+}
+
+.BsignUp {
+    border-radius: 5% 25%;
+}
+
+.left {
+    background-color: #173B45;
+}
+
+.left {
+    color: white;
+}
+
+.right {
+    color: #173B45;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #173B45;
+    border-color: #173B45;
+}
+
+.btn-outline-secondary {
+    color: #173B45;
+    border-color: #6c757d;
+    background-color: white;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #04181e;
+    border-color: #04181e;
+}
+
+.btn-check:focus+.btn-primary,
+.btn-primary:focus {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000e22;
+    box-shadow: 0 0 0 0.1rem rgb(0 0 0 / 74%);
+}
+
+nav {
+    background-color: #173B45;
+}
+
+.HelloPage {
+    width: fit-content;
+    background-color: #0A5EB0;
+    transform: translateY(75%);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+
+</head>
+
+<body>
+
+    <div class="row bigOneSignUp m-auto w-75 d-none">
+        <div class="left col-md-4 col-sm-12">
+            <div class="container p-5">
+                <h2>Welcome Back!</h2>
+                <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis enim dicta?</p>
+                <button type="button" class="btn btn-outline-secondary">Sign In</button>
+            </div>
+        </div>
+
+        <div class="right col-md-8 col-sm-12 ">
+            <div class="container p-4 text-center">
+                <h1 class="mb-4">Create Account</h1>
+                <div class="form-floating mb-3">
+                    <input oninput="isValidName()" type="email" class="form-control" id="NameUp" placeholder="name@example.com">
+                    <label for="floatingInput">Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input oninput="isValidEmail()" type="email" class="form-control" id="EmailUp" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mt-4">
+                    <input oninput="isValidPass()" type="password" class="form-control" id="PassUp" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="alert alert-danger d-none my-3" role="alert">
+                    change your inputs
+                </div>
+                <button id="btnUp" type="button" class="BsignUp btn btn-primary btn-lg  mt-5"> Sign Up</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!------------------------------------------------>
+
+
+    <div class="row bigOneSignIn m-auto w-75 ">
+
+
+        <div class="right col-md-8 col-sm-12 ">
+            <div class="container p-4 text-center">
+                <h1 class="mb-4">Sign In</h1>
+
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="EmailIn" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mt-4">
+                    <input type="password" class="form-control" id="PassIn" placeholder="Password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="alert alert-danger d-none my-3" role="alert" id="inAlert">
+                    Not Exist
+                </div>
+                <button id="btnIn" type="button" class="BsignUp btn btn-primary btn-lg  mt-5"> Sign In</button>
+
+            </div>
+
+        </div>
+
+        <div class="left col-md-4 col-sm-12">
+            <div class="container p-5">
+                <h2>Hello,Friend</h2>
+                <p class="my-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis enim dicta?</p>
+                <button type="button" class="btn btn-outline-secondary">Sign Up</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-------------------------------------------->
+
+
+    <nav class="navbar d-none" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-1 text-light">Log In</a>
+            <form class="d-flex" role="search">
+
+                <button id="logOut" class="btn btn-outline-warning fs-2" type="submit">LogOut</button>
+            </form>
+        </div>
+    </nav>
+    <section id="welPage" class="d-none HelloPage  m-auto p-5 d-flex justify-content-center align-items-center rounded-2">
+        <h2 class="text-light d-inline">Hello, joe</h2>
+    </section>
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myJS.js"></script>
+</body>
+
+</html>
