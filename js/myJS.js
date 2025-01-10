@@ -20,6 +20,7 @@ var signInPass = document.getElementById("PassIn")
 var btnIn = document.getElementById("btnIn");
 
 var inAlr = document.getElementById("inAlert")
+var E_inAlr = document.getElementById("E-inAlert")
 var nav = document.getElementById("nav")
 var welPage = document.getElementById("welPage")
 var logOut = document.getElementById("logOut");
@@ -35,6 +36,9 @@ btnUp.addEventListener('click', function(e) {
     e.preventDefault();
     if (signUpName.value == "" || signUpEmail.value == "" || signUpPass.value == "") {
         EAlert.classList.remove("d-none")
+        setTimeout(() => {
+            EAlert.classList.add('d-none');
+        }, 1500);
 
     } else if (ExistUp() && isValidEmail() && isValidPass()) {
         SignUp.push({
@@ -48,12 +52,10 @@ btnUp.addEventListener('click', function(e) {
         SAlert.classList.remove("d-none")
         setTimeout(() => {
             SAlert.classList.add('d-none');
+            EAlert.classList.add('d-none');
+            alert.classList.add('d-none');
         }, 1500);
-    } else {
-
-        alert.classList.remove("d-none")
-        EAlert.classList.add("d-none")
-    }
+    } else {}
     signUpEmail.classList.remove("is-valid")
     signUpEmail.classList.remove("is-invalid")
     signUpPass.classList.remove("is-valid")
@@ -111,7 +113,14 @@ for (var i = 0; i < change.length; i++) {
 }
 
 btnIn.addEventListener('click', function() {
-    if (ExistIn()) {
+    if (signInEmail.value == "" || signInPass.value == "") {
+        E_inAlr.classList.remove("d-none")
+        setTimeout(() => {
+            E_inAlr.classList.add('d-none');
+        }, 1500);
+
+
+    } else if (ExistIn()) {
         nav.classList.remove("d-none")
         welPage.classList.remove("d-none");
         namePage.innerHTML = `Hello, ${outName}`
@@ -121,6 +130,9 @@ btnIn.addEventListener('click', function() {
     } else {
 
         inAlr.classList.remove("d-none")
+        setTimeout(() => {
+            inAlr.classList.add('d-none')
+        }, 1500);
 
     }
 
