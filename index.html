@@ -22,24 +22,32 @@
         </div>
 
         <div class="right col-md-8 col-sm-12 ">
-            <div class="container p-4 text-center">
-                <h1 class="mb-4">Create Account</h1>
-                <div class="form-floating mb-3">
-                    <input oninput="isValidName()" type="email" class="form-control" id="NameUp" placeholder="name@example.com">
-                    <label for="floatingInput">Name</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input oninput="isValidEmail()" type="email" class="form-control" id="EmailUp" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating mt-4">
-                    <input oninput="isValidPass()" type="password" class="form-control" id="PassUp" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="alert alert-danger d-none my-3" role="alert">
-                    change your inputs
-                </div>
-                <button id="btnUp" type="button" class="BsignUp btn btn-primary btn-lg  mt-5"> Sign Up</button>
+            <form action="">
+                <div class="container p-4 text-center">
+                    <h1 class="mb-4">Create Account</h1>
+                    <div class="form-floating mb-3">
+                        <input oninput="isValidName()" type="email" class="form-control" id="NameUp" placeholder="name@example.com">
+                        <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input oninput="isValidEmail()" type="email" class="form-control" id="EmailUp" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mt-4">
+                        <input oninput="isValidPass()" type="password" class="form-control" id="PassUp" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="alert alert-danger d-none my-3" role="alert">
+                        Your Input should changed
+                    </div>
+                    <div class="E-alert alert-danger d-none my-3" role="alert">
+                        Input is Empty
+                    </div>
+                    <div class="S-alert alert-success d-none  my-3" role="alert">
+                        successfully..!
+                    </div>
+                    <button id="btnUp" type="submit" class="BsignUp btn btn-primary btn-lg  mt-5"> Sign Up</button>
+            </form>
 
             </div>
 

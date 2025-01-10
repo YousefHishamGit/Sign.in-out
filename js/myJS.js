@@ -8,6 +8,8 @@ if (localStorage.getItem("Array") !== null) {
 }
 var btnUp = document.getElementById("btnUp");
 var alert = document.querySelector(".alert");
+var EAlert = document.querySelector(".E-alert");
+var SAlert = document.querySelector(".S-alert");
 var Up = document.querySelector(".bigOneSignUp");
 var In = document.querySelector(".bigOneSignIn");
 var change = document.querySelectorAll(".left button")
@@ -29,8 +31,12 @@ var namePage = document.querySelector("#welPage h2");
 
 
 
-btnUp.addEventListener('click', function() {
-    if (ExistUp() && isValidEmail() && isValidPass()) {
+btnUp.addEventListener('click', function(e) {
+    e.preventDefault();
+    if (signUpName.value == "" || signUpEmail.value == "" || signUpPass.value == "") {
+        EAlert.classList.remove("d-none")
+
+    } else if (ExistUp() && isValidEmail() && isValidPass()) {
         SignUp.push({
             name: signUpName.value,
             Email: signUpEmail.value,
@@ -38,9 +44,15 @@ btnUp.addEventListener('click', function() {
         })
         localStorage.setItem('Array', JSON.stringify(SignUp))
         alert.classList.add("d-none")
+        EAlert.classList.add("d-none")
+        SAlert.classList.remove("d-none")
+        setTimeout(() => {
+            SAlert.classList.add('d-none');
+        }, 1500);
     } else {
 
         alert.classList.remove("d-none")
+        EAlert.classList.add("d-none")
     }
     signUpEmail.classList.remove("is-valid")
     signUpEmail.classList.remove("is-invalid")
@@ -48,6 +60,7 @@ btnUp.addEventListener('click', function() {
     signUpPass.classList.remove("is-invalid")
     signUpName.classList.remove("is-valid")
     signUpName.classList.remove("is-invalid")
+
 
 
     signUpName.value = "";
@@ -62,9 +75,6 @@ btnUp.addEventListener('click', function() {
 function ExistUp() {
     for (var i = 0; i < SignUp.length; i++) {
         if (signUpEmail.value == SignUp[i].Email || signUpName.value == SignUp[i].name || signUpPass.value == SignUp[i].pass) {
-
-
-
             return false;
         }
     }
