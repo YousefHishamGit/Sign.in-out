@@ -55,7 +55,13 @@ btnUp.addEventListener('click', function(e) {
             EAlert.classList.add('d-none');
             alert.classList.add('d-none');
         }, 1500);
-    } else {}
+    } else {
+        alert.classList.remove("d-none")
+        setTimeout(() => {
+            alert.classList.add('d-none');
+        }, 1500);
+
+    }
     signUpEmail.classList.remove("is-valid")
     signUpEmail.classList.remove("is-invalid")
     signUpPass.classList.remove("is-valid")
@@ -76,7 +82,7 @@ btnUp.addEventListener('click', function(e) {
 
 function ExistUp() {
     for (var i = 0; i < SignUp.length; i++) {
-        if (signUpEmail.value == SignUp[i].Email || signUpName.value == SignUp[i].name || signUpPass.value == SignUp[i].pass) {
+        if (signUpEmail.value == SignUp[i].Email || signUpPass.value == SignUp[i].pass) {
             return false;
         }
     }
@@ -149,7 +155,7 @@ logOut.addEventListener('click', function() {
 
 //validation by regax
 function isValidEmail() {
-    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    const emailRegex = /^[a-zA-Z][a-zA-Z0-9._-]*@gmail\.com$/;
     if (emailRegex.test(signUpEmail.value)) {
         signUpEmail.classList.remove("is-invalid")
         signUpEmail.classList.add("is-valid")
